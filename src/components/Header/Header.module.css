@@ -1,3 +1,15 @@
-.header {
-    
+.head {
+    margin-left: 100px;
+    height: 55px;
+    background: #d1e0ed;
+}
+.search {
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid #76bef8;
+    margin-top: 10px;
+    margin-left: 40px;
+    width: 450px;
+    font-size: 14px;
+    padding-left: 20px;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
 const Actives = () => {
-  return <div>Активы</div>;
+  return <div style={{marginLeft:"120px"}}>Активы</div>;
 };
 export default Actives;

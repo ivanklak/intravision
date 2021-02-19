@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className={s.head}>
         <div>
-            <span>Search bar</span>
+            <input className={s.search} type="text" placeholder="Поиск.." />
         </div>
     </header>
   )

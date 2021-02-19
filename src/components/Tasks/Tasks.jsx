@@ -14,9 +14,9 @@ const Tasks = props => {
         <div className={s.btn}>
           <button className={s.createBtn}>Создать заявку</button>
         </div>
-        <table className="table">
+        <table className={s.table}>
           <thead>
-            <tr>
+            <tr className={s.thead}>
               <th>ID</th>
               <th>Название</th>
               <th>Статус</th>
@@ -26,9 +26,9 @@ const Tasks = props => {
           <tbody>
             {props.tasks.value
               ? props.tasks.value.map(task => (
-                  <tr key={task.id}>
+                  <tr key={task.id} className={s.tbody}>
                     <td>{task.id}</td>
-                    <td>{task.name}</td>
+                    <td style={{ width: "250px" }}>{task.name}</td>
                     <td>{task.statusName}</td>
                     <td>{task.executorName}</td>
                   </tr>

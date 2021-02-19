@@ -1,6 +1,6 @@
 import React from "react";
 
 const Clients = () => {
-  return <div>Клиенты</div>;
+  return <div style={{marginLeft:"120px"}}>Клиенты</div>;
 };
 export default Clients;
