@@ -2,12 +2,16 @@ import React from "react";
 import "./TaskEdit.css";
 import { connect } from "react-redux";
 import { Cross } from "@styled-icons/entypo/Cross";
-import { toggleEdit } from "../../Redux/tasks-reducer";
+import { toggleEdit, requestTasks } from "../../Redux/tasks-reducer";
 
 class TaskEdit extends React.Component {
+  onClickSave = () => {
+    this.props.toggleEdit();
+    this.props.requestTasks();
+  };
   render() {
     const { toggleEdit, show, item } = this.props;
-    console.log(this.props);
+    // console.log(this.props);
     return item ? (
       <div className={`task-edit ${show ? "show" : ""}`}>
         <div className={"header"}>
@@ -27,7 +31,9 @@ class TaskEdit extends React.Component {
         <div className={"description"}>
           <p>Добавление комментария</p>
         </div>
-        <button className={"saveBtn"}>Сохранить</button>
+        <button className={"saveBtn"} onClick={this.onClickSave}>
+          Сохранить
+        </button>
 
         <div className={"statusBar"}>
           <p style={{ backgroundColor: item.statusRgb }} className={"status"}>
@@ -47,4 +53,4 @@ let mapStateToProps = state => {
     show: state.tasksPage.taskEdit
   };
 };
-export default connect(mapStateToProps, { toggleEdit })(TaskEdit);
+export default connect(mapStateToProps, { toggleEdit, requestTasks })(TaskEdit);

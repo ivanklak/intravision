@@ -39,6 +39,10 @@ export const prioritiesAPI = {
 
 export const taskCreateAPI = {
   getCreate(data) {
-    return instance.post(`api/${tenantguid}/Tasks`);
+    // debugger;
+    return instance.post(`api/${tenantguid}/Tasks`, {
+      name: data.name,
+      description: data.description
+    });
   }
 };

@@ -4,7 +4,7 @@
   right: 0;
   border: 1px solid #bfc4c9b9;
   border-right: none;
-  transition: 0.2s;
+  transition: 0.3s;
   position: absolute;
   opacity: 0;
   bottom: 0;
@@ -16,17 +16,18 @@
   flex-direction: column;
 }
 .task-create.show {
-  transition: 0.2s;
+  transition: 0.3s;
   opacity: 1;
   transform: translateX(0);
 }
 .header {
   display: flex;
+  background-color: #1a4876;
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
   height: 60px;
-  background-color: #1a4876;
+  
 }
 .header-title {
   font-size: 16px;

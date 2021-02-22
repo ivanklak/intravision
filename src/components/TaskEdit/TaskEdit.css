@@ -4,7 +4,7 @@
   right: 0;
   border: 1px solid #b1c2c0;
   border-right: none;
-  transition: 0.5s;
+  transition: 0.3s;
   position: absolute;
   opacity: 0;
   bottom: 0;
@@ -16,9 +16,9 @@
   flex-direction: column;
 }
 .task-edit.show {
-  transition: 0.2s;
-  opacity: 1;
+  transition: 0.3s;
   transform: translateX(0);
+  opacity: 1;
 }
 .close-btn {
   color: rgb(255, 255, 255);
@@ -28,12 +28,12 @@
 
 .header {
   display: flex;
+  background-color: #1a4876;
+  padding: 0 24px;
+  height: 60px;
   justify-content: space-between;
   align-items: center;
   text-align: left;
-  padding: 0 24px;
-  height: 60px;
-  background-color: #1a4876;
   color: white;
 }
 .header p {

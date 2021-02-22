@@ -60,7 +60,7 @@ export const requestTasks = () => {
   return dispatch => {
     dispatch(setTougleIsFetching(true));
     tasksAPI.getTasks().then(response => {
-      //   debugger;
+      //  debugger;
       dispatch(setTougleIsFetching(false));
       dispatch(setTasks(response.data));
       // console.log(response.data);
