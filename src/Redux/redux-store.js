@@ -3,7 +3,7 @@ import thunkMiddleware from "redux-thunk";
 import tasksReducer from "./tasks-reducer";
 
 const reducers = combineReducers({
-  tasksPage: tasksReducer
+  tasksPage: tasksReducer,
 });
 
 const store = createStore(reducers, applyMiddleware(thunkMiddleware));

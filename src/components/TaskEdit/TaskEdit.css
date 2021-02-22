@@ -1,0 +1,95 @@
+.task-edit {
+  transform: translateX(80%);
+  top: 60px;
+  right: 0;
+  border: 1px solid #b1c2c0;
+  border-right: none;
+  transition: 0.5s;
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  z-index: 5;
+  background-color: #ecf3f7;
+  width: 915px;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+.task-edit.show {
+  transition: 0.2s;
+  opacity: 1;
+  transform: translateX(0);
+}
+.close-btn {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding: 0 24px;
+  height: 60px;
+  background-color: #1a4876;
+  color: white;
+}
+.header p {
+  margin: 0px 40px;
+}
+.header-title {
+  font-size: 16px;
+  color: white;
+  display: block;
+  font-weight: 600;
+}
+
+.name {
+  border: 1px solid rgba(117, 117, 117, 0.336);
+  background: #ffffff;
+  width: 807px;
+  margin-left: -24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 14px;
+}
+
+.description {
+  /* border: 1px solid black; */
+  margin-top: 10px;
+  margin-left: 40px;
+  width: 550px;
+}
+.description p {
+  font-size: 14px;
+  color: #a0a0a0;
+}
+.saveBtn {
+  background: rgb(45, 134, 236);
+  color: aliceblue;
+  border: 1px solid rgb(45, 134, 236);
+  border-radius: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  cursor: pointer;
+  font-size: 14px;
+  height: 33px;
+  width: 180px;
+  margin-top: 50px;
+  margin-left: 40px;
+}
+.status {
+  display: flex;
+  color: white;
+  text-transform: lowercase;
+  height: 22px;
+  padding: 0 10px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 11px;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+}

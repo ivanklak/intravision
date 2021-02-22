@@ -1,20 +1,33 @@
 import React from "react";
 import Tasks from "./Tasks";
 import { connect } from "react-redux";
-import { requestTasks } from "../../Redux/tasks-reducer";
+import {
+  requestTasks,
+  requestStatuses,
+  requestPriorities
+} from "../../Redux/tasks-reducer";
 import Preloader from "../../Proloader/Preloader";
 
 class TasksContainer extends React.Component {
   componentDidMount() {
     this.props.requestTasks();
-    //   console.log(this.props);
+    this.props.requestStatuses();
+    this.props.requestPriorities();
+    console.log(this.props);
   }
 
   render() {
     return (
       <>
         {this.props.isFetching ? <Preloader /> : null}
-        <Tasks tasks={this.props.tasks} />
+        <Tasks
+          statuses={this.props.statuses}
+          priorities={this.props.priorities}
+          // toggleCreate={this.props.toggleCreate}
+          // toggleEdit={this.props.toggleEdit}
+          taskCreate={this.props.taskCreate}
+          tasks={this.props.tasks}
+        />
       </>
     );
   }
@@ -23,37 +36,13 @@ class TasksContainer extends React.Component {
 let mapStateToProps = state => {
   return {
     tasks: state.tasksPage.tasks,
-    isFetching: state.tasksPage.isFetching
+    isFetching: state.tasksPage.isFetching,
+    priorities: state.tasksPage.priorities,
+    statuses: state.tasksPage.statuses
   };
 };
-export default connect(mapStateToProps, { requestTasks })(TasksContainer);
-
-// const TasksContainer = props => {
-//     const [data, setData] = useState({ tasks: [] });
-//     useEffect(() => {
-//       tasksAPI.getTasks()
-//         .then(response =>
-//           response.value.map(task => {
-//             const {
-//               id,
-//               name,
-//               description,
-//               statusName,
-//               statusRgb,
-//               executorName
-//             } = task;
-//             return { id, name, description, statusName, statusRgb, executorName };
-//           })
-//         )
-//         .then(tasks => {
-//           console.log(tasks);
-//           setData({ tasks });
-//         });
-//     }, []);
-
-//     return (
-//       <div>
-//         <Tasks value={[ data, setData ]} />
-//       </div>
-//     );
-//   };
+export default connect(mapStateToProps, {
+  requestTasks,
+  requestStatuses,
+  requestPriorities
+})(TasksContainer);

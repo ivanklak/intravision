@@ -2,9 +2,11 @@
   margin-left: 140px;
 }
 .btn {
-  margin-bottom: 20px;
-  margin-top: 15px;
-  margin-left: 150px;
+  display: flex;
+  justify-content: center;
+  margin-top: 17px;
+  margin-bottom: 17px;
+  margin-right: 700px;
 }
 .createBtn {
   background: rgb(45, 134, 236);
@@ -13,23 +15,37 @@
   border-radius: 15px;
   padding-left: 40px;
   padding-right: 40px;
-  height: 30px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
+  height: 33px;
 }
 .table {
   text-align: left;
+  font-size: 14px;
 }
 .tbody {
   font-size: 14px;
-  
+  cursor: pointer;
 }
 .tbody td {
-  /* padding-top: 5px;
-  padding-bottom: 5px; */
   border-top: 1px solid rgba(129, 129, 129, 0.288);
   padding: 5px 20px;
 }
+/* .tbody td:hover {
+  background: rgba(151, 151, 151, 0.301);
+} */
 .thead th {
   padding: 5px 20px;
+}
+.status {
+  display: flex;
+  color: white;
+  text-transform: lowercase;
+  height: 22px;
+  padding: 0 10px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 11px;
+  justify-content: center;
+  align-items: center;
 }
