@@ -17,14 +17,6 @@ export const tasksAPI = {
   }
 };
 
-export const taskUpdateAPI = {
-  getUpdate(orderId, statusId) {
-    return instance.put(`api/${tenantguid}/Tasks/${orderId}/`, {
-      statusId: statusId
-    });
-  }
-};
-
 export const statusesAPI = {
   getStatus() {
     return instance.get(`api/${tenantguid}/Statuses`);
@@ -43,6 +35,15 @@ export const taskCreateAPI = {
     return instance.post(`api/${tenantguid}/Tasks`, {
       name: data.name,
       description: data.description
+    });
+  }
+};
+
+export const taskUpdateAPI = {
+  getUpdate(taskId, statusId) {
+    // debugger;
+    return instance.put(`api/${tenantguid}/Tasks/${taskId}/`, {
+      statusId: statusId
     });
   }
 };

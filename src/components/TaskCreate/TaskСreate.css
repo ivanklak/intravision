@@ -5,7 +5,7 @@
   border: 1px solid #bfc4c9b9;
   border-right: none;
   transition: 0.3s;
-  position: absolute;
+  position: fixed;
   opacity: 0;
   bottom: 0;
   z-index: 5;
